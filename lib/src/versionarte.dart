@@ -95,9 +95,9 @@ class Versionarte {
       logVersionarte(error, error: e);
 
       return VersionarteResult(VersionarteStatus.unknown);
-    } catch (e, s) {
+    } on Exception catch (e, s) {
       logVersionarte(
-        'An error occurred while checking for updates. '
+        'An exception occurred while checking for updates. '
         'Check the debug console to see the error and stack trace.',
         error: e,
         stackTrace: s,

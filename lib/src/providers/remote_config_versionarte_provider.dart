@@ -63,7 +63,7 @@ class RemoteConfigVersionarteProvider extends VersionarteProvider {
       final versionarteDecoded = jsonDecode(versionarteString);
 
       manifest = DistributionManifest.fromJson(versionarteDecoded);
-    } catch (e, s) {
+    } on Exception catch (e, s) {
       logVersionarte('Exception: $e');
       logVersionarte('Stack Trace: $s');
     }
